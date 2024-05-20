@@ -2,7 +2,6 @@ document.addEventListener('DOMContentLoaded', () => {
     const itemForm = document.getElementById('itemForm');
     const itemsList = document.getElementById('itemsList');
   
-    // Fetch and display items
     fetch('/items')
       .then(response => response.json())
       .then(items => {
@@ -14,7 +13,6 @@ document.addEventListener('DOMContentLoaded', () => {
         });
       });
   
-    // Add item
     itemForm.addEventListener('submit', (event) => {
       event.preventDefault();
       const name = document.getElementById('name').value;
@@ -30,7 +28,7 @@ document.addEventListener('DOMContentLoaded', () => {
       .then(response => response.text())
       .then(message => {
         console.log(message);
-        location.reload(); // Refresh to show the new item
+        location.reload(); 
       });
     });
   });

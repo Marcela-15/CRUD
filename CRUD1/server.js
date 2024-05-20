@@ -6,12 +6,11 @@ const app = express();
 
 app.use(bodyParser.json());
 
-// MySQL connection
 const connection = mysql.createConnection({
-  host: 'localhost', // Replace with your host
-  user: 'your-username', // Replace with your username
-  password: 'your-password', // Replace with your password
-  database: 'your-database' // Replace with your database name
+  host: 'localhost',  
+  user: 'your-username', 
+  password: 'your-password', 
+  database: 'your-database' 
 });
 
 connection.connect((err) => {
